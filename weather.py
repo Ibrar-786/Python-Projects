@@ -21,6 +21,7 @@ def main():
     wind_speed = data['wind']['speed']
     sunrise = dt.datetime.utcfromtimestamp(data['sys']['sunrise'] + data['timezone'])
     sunset = dt.datetime.utcfromtimestamp(data['sys']['sunset'] + data['timezone'])
+    time = dt.datetime.utcfromtimestamp(data['dt'])
 
     # Prints out the data to the screen
 
@@ -37,6 +38,7 @@ def main():
     print('Windspeed:', wind_speed, 'm/s')
     print('Sunrise:', sunrise, 'local time')
     print('Sunset:', sunset, 'local time')
+    print('Time:', time, 'local time')
     print('--------------------------------------')
 
 main()
